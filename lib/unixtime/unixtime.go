@@ -4,7 +4,7 @@ import (
   "time"
 )
 
-func Load() string {
-  return string(time.Now().Unix())
+func Load() int64 {
+  return time.Now().Unix()
 }
 
