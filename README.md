@@ -1,4 +1,4 @@
 gofigure
 ========
 
-ruby to go translation of factor
+ruby to go translation of facter
