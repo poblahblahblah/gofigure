@@ -11,3 +11,7 @@ func Chomp(s string) string {
   return s2
 }
 
+func Strip(s string) string {
+  return strings.Replace(s, `"`, "", -1)
+}
+

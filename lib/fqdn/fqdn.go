@@ -1,3 +1,6 @@
+// FIXME:
+// this is breaking on fedora20 (and probably others)
+
 package fqdn
 
 import (
