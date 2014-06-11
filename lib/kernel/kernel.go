@@ -1,4 +1,4 @@
-package kernelname
+package kernel
 
 import (
   "github.com/poblahblahblah/gofigure/lib/factfuncts"

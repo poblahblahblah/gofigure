@@ -1,20 +1,13 @@
 package kernelversion
 
 import (
-  "github.com/poblahblahblah/gofigure/lib/factfuncts"
-  "os/exec"
+  "github.com/poblahblahblah/gofigure/lib/kernelrelease"
+  "strings"
 )
 
 func Load() string {
-    app  := "uname"
-    arg0 := "-r"
+  kernelrelease := strings.Split(kernelrelease.Load(), "-")
 
-    cmd := exec.Command(app, arg0)
-    out, err := cmd.Output()
-
-    if err != nil {
-        panic(err)
-    }
-    return(factfuncts.Chomp(string(out)))
+  return kernelrelease[0]
 }
 

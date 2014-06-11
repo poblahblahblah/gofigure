@@ -1,12 +1,12 @@
 package hardwarearchitecture
 
 import (
-  "github.com/poblahblahblah/gofigure/lib/kernelname"
+  "github.com/poblahblahblah/gofigure/lib/kernel"
 )
 
 func Load() string {
 // FIXME - no idea how to get this info from OS X.
-    switch kernelname.Load() {
+    switch kernel.Load() {
     case "Linux":
         return "x86_64"
 

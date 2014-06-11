@@ -28,6 +28,8 @@ func Load() string {
 
     if centos_regexp.MatchString(os_long_string) == true {
       return string("CentOS")
+    } else if fedora_regexp.MatchString(os_long_string) == true {
+      return string("Fedora")
     } else if redhat_regexp.MatchString(os_long_string) == true {
       return string("RedHat")
     } else if scientific_regexp.MatchString(os_long_string) == true {
