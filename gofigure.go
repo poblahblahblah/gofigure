@@ -4,6 +4,7 @@ import (
     "github.com/kelseyhightower/go-facter"
     "github.com/poblahblahblah/gofigure/lib/architecture"
     "github.com/poblahblahblah/gofigure/lib/fqdn"
+    "github.com/poblahblahblah/gofigure/lib/hardwareisa"
     "github.com/poblahblahblah/gofigure/lib/hardwaremodel"
     "github.com/poblahblahblah/gofigure/lib/hostname"
     "github.com/poblahblahblah/gofigure/lib/id"
@@ -26,6 +27,7 @@ func main() {
     f.Add("gofigure_version",       gofigureVersion())
     f.Add("architecture",           architecture.Load())
     f.Add("fqdn",                   fqdn.Load())
+    f.Add("hardwareisa",            hardwareisa.Load())
     f.Add("hardwaremodel",          hardwaremodel.Load())
     f.Add("hostname",               hostname.Load())
     f.Add("id",                     id.Load())
