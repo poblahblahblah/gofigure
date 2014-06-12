@@ -16,7 +16,7 @@ func Load() string {
   out, err := cmd.Output()
 
   if err != nil {
-    panic(err)
+    return string("")
   }
 
   return factfuncts.Chomp(string(out))

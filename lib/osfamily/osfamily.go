@@ -8,7 +8,7 @@ func Load() string {
   // let's try to work through the operating systems alphabetically.
 
   switch operatingsystem.Load() {
-  case "CentOS", "Fedora", "RedHat", "Scientific":
+  case "CentOS", "Fedora", "OracleLinux", "RedHat", "Scientific":
     return "RedHat"
   case "Debian", "Ubuntu":
     return "Debian"

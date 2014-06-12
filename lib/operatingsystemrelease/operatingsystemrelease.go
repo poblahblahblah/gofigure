@@ -5,14 +5,24 @@ import (
   "github.com/poblahblahblah/gofigure/lib/operatingsystem"
   "io/ioutil"
   "os"
+  "regexp"
   "strings"
 )
 
 func Load() string {
   switch operatingsystem.Load() {
 
-  case "CentOS":
-    return "FIXME"
+  case "CentOS", "RedHat", "Scientific":
+    // FIXME: there's probably a better way to do this.
+    if _, err := os.Stat("/etc/redhat-release"); err == nil {
+
+      results, err := ioutil.ReadFile("/etc/redhat-release")
+      if err !=nil { panic(err) }
+
+      version_regexp, err := regexp.Compile(`\d+\.\d+`)
+      return (version_regexp.FindString(string(results)))
+    }
+
 
   case "Debian":
     // debian is pretty straight forward. we should just be able to read the
@@ -20,17 +30,29 @@ func Load() string {
     if _, err := os.Stat("/etc/debian_version"); err == nil {
 
       results, err := ioutil.ReadFile("/etc/debian_version")
-
-      if err != nil {
-        panic(err)
-      }
+      if err != nil { panic(err) }
       
       os_version := factfuncts.Chomp(string(results))
-
       return string(os_version)
     }
 
   case "Fedora":
+    return "FIXME"
+
+  case "OracleLinux":
+    // FIXME: I feel like this will break pretty easily.
+    if _, err := os.Stat("/etc/oracle-release"); err == nil {
+
+    results, err := ioutil.ReadFile("/etc/oracle-release")
+    if err != nil { panic(err) }
+
+    version_regexp, err := regexp.Compile(`\d+\.\d+`)
+    return (version_regexp.FindString(string(results)))
+
+  }
+
+
+  case "OS X":
     return "FIXME"
 
   case "Ubuntu":
