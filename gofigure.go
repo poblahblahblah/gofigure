@@ -2,8 +2,9 @@ package main
 
 import (
     "github.com/kelseyhightower/go-facter"
+    "github.com/poblahblahblah/gofigure/lib/architecture"
     "github.com/poblahblahblah/gofigure/lib/fqdn"
-    "github.com/poblahblahblah/gofigure/lib/hardwarearchitecture"
+    "github.com/poblahblahblah/gofigure/lib/hardwaremodel"
     "github.com/poblahblahblah/gofigure/lib/hostname"
     "github.com/poblahblahblah/gofigure/lib/id"
     "github.com/poblahblahblah/gofigure/lib/kernel"
@@ -23,8 +24,9 @@ func main() {
 
     f := facter.New()
     f.Add("gofigure_version",       gofigureVersion())
+    f.Add("architecture",           architecture.Load())
     f.Add("fqdn",                   fqdn.Load())
-    f.Add("hardware_architecture",  hardwarearchitecture.Load())
+    f.Add("hardwaremodel",          hardwaremodel.Load())
     f.Add("hostname",               hostname.Load())
     f.Add("id",                     id.Load())
     f.Add("kernel",                 kernel.Load())
