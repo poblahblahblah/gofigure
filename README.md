@@ -2,3 +2,104 @@ gofigure
 ========
 
 ruby to go translation of facter
+
+ - [x] architecture
+ - [x] domain
+ - [ ] facterversion
+ - [ ] fqdn
+ - [x] hardwareisa
+ - [x] hardwaremodel
+ - [x] hostname
+ - [x] id
+ - [ ] interfaces
+ - [ ] ipaddress
+ - [ ] ipaddress_en0
+ - [ ] ipaddress_lo0
+ - [ ] ipaddress_tun0
+ - [ ] is_virtual
+ - [x] kernel
+ - [x] kernelmajversion
+ - [x] kernelrelease
+ - [x] kernelversion
+ - [ ] macaddress
+ - [ ] macaddress_bridge0
+ - [ ] macaddress_en0
+ - [ ] macaddress_en3
+ - [ ] macaddress_en4
+ - [ ] macaddress_en5
+ - [ ] macaddress_fw0
+ - [ ] macaddress_p2p0
+ - [ ] macosx_buildversion
+ - [ ] macosx_productname
+ - [ ] macosx_productversion
+ - [ ] macosx_productversion_major
+ - [ ] macosx_productversion_minor
+ - [ ] memoryfree
+ - [ ] memoryfree_mb
+ - [ ] memorysize
+ - [ ] memorysize_mb
+ - [ ] mtu_bridge0
+ - [ ] mtu_en0
+ - [ ] mtu_en3
+ - [ ] mtu_en4
+ - [ ] mtu_en5
+ - [ ] mtu_fw0
+ - [ ] mtu_gif0
+ - [ ] mtu_lo0
+ - [ ] mtu_p2p0
+ - [ ] mtu_stf0
+ - [ ] mtu_tun0
+ - [ ] netmask
+ - [ ] netmask_en0
+ - [ ] netmask_lo0
+ - [ ] netmask_tun0
+ - [ ] network_en0
+ - [ ] network_lo0
+ - [ ] network_tun0
+ - [x] operatingsystem
+ - [x] operatingsystemrelease
+ - [x] osfamily
+ - [x] path
+ - [ ] processorcount
+ - [ ] productname
+ - [ ] ps
+ - [ ] rubysitedir
+ - [ ] rubyversion
+ - [ ] sp_boot_mode
+ - [ ] sp_boot_rom_version
+ - [ ] sp_boot_volume
+ - [ ] sp_cpu_type
+ - [ ] sp_current_processor_speed
+ - [ ] sp_kernel_version
+ - [ ] sp_l2_cache_core
+ - [ ] sp_l3_cache
+ - [ ] sp_local_host_name
+ - [ ] sp_machine_model
+ - [ ] sp_machine_name
+ - [ ] sp_number_processors
+ - [ ] sp_os_version
+ - [ ] sp_packages
+ - [ ] sp_physical_memory
+ - [ ] sp_platform_uuid
+ - [ ] sp_secure_vm
+ - [ ] sp_serial_number
+ - [ ] sp_smc_version_system
+ - [ ] sp_uptime
+ - [ ] sp_user_name
+ - [ ] sshdsakey
+ - [ ] sshfp_dsa
+ - [ ] SSHFP
+ - [ ] sshfp_rsa
+ - [ ] SSHFP
+ - [ ] sshrsakey
+ - [ ] swapencrypted
+ - [ ] swapfree
+ - [ ] swapfree_mb
+ - [ ] swapsize
+ - [ ] swapsize_mb
+ - [x] timezone
+ - [ ] uptime
+ - [ ] uptime_days
+ - [ ] uptime_hours
+ - [ ] uptime_seconds
+ - [ ] virtual
