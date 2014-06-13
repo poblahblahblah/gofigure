@@ -1,24 +1,19 @@
-// FIXME:
-// this is breaking on fedora20 (and probably others)
-
 package fqdn
 
 import (
-  "github.com/poblahblahblah/gofigure/lib/factfuncts"
-  "os/exec"
+  "github.com/poblahblahblah/gofigure/lib/domain"
+  "github.com/poblahblahblah/gofigure/lib/hostname"
+  "strings"
 )
 
 func Load() string {
-  app  := "hostname"
-  arg0 := "-f"
+  // this will take the data from the `hostname` and `domain` facts and throw
+  // them together. this is to (hopefully) avoid a DNS lookup if possible.
+  // this could all be one line, but separated it out for clarity.
+  fqdn_bits := []string{hostname.Load(), domain.Load()}
+  fqdn      := strings.Join(fqdn_bits, ".")
 
-  cmd := exec.Command(app, arg0)
-  out, err := cmd.Output()
+  return string(fqdn)
 
-  if err != nil {
-    return string("")
-  }
-
-  return factfuncts.Chomp(string(out))
 }
 
