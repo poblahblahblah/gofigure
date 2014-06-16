@@ -63,8 +63,8 @@ ruby to go translation of facter
  - [ ] processorcount
  - [ ] productname
  - [ ] ps
- - [ ] rubysitedir
- - [ ] rubyversion
+ - [ ] rubysitedir (GO_PATH?)
+ - [ ] rubyversion (go version?)
  - [ ] sp_boot_mode
  - [ ] sp_boot_rom_version
  - [ ] sp_boot_volume
