@@ -6,7 +6,7 @@ ruby to go translation of facter
  - [x] architecture
  - [x] domain
  - [ ] facterversion
- - [ ] fqdn
+ - [x] fqdn
  - [x] hardwareisa
  - [x] hardwaremodel
  - [x] hostname
