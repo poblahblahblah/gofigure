@@ -27,5 +27,6 @@ func Load() string {
 
     return factfuncts.Chomp(string(out))
   }
+  return "unsupported OS"
 }
 

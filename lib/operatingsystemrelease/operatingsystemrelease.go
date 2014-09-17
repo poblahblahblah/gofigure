@@ -37,7 +37,15 @@ func Load() string {
     }
 
   case "Fedora":
-    return "FIXME"
+    // FIXME: this is also probably terrible.
+    if _, err := os.Stat("/etc/redhat-release"); err == nil {
+
+      results, err := ioutil.ReadFile("/etc/redhat-release")
+      if err !=nil { panic(err) }
+
+      version_regexp, err := regexp.Compile(`\d+`)
+      return (version_regexp.FindString(string(results)))
+    }
 
   case "OracleLinux":
     // FIXME: I feel like this will break pretty easily.

@@ -1,3 +1,7 @@
+// purpose: returns hardware model of the current node
+
+// supports: CentOS, Debian, Fedora, OSX, RedHat, Scientific, Ubuntu
+
 package hardwaremodel
 
 import (

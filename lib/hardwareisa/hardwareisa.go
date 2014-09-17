@@ -1,3 +1,9 @@
+// purpose: returns node's hardware processor type
+
+// supports: CentOS, Debian, Fedora, OSX, RedHat, Scientific, Ubuntu
+
+// issues: 
+
 package hardwareisa
 
 import (
@@ -6,13 +12,13 @@ import (
 )
 
 func Load() string {
-  app      := "uname"
-  arg0     := "-p"
-  cmd      := exec.Command(app, arg0)
-  out, err := cmd.Output()
+  uname_app            := "uname"
+  uname_arg0           := "-p"
+  uname_cmd            := exec.Command(uname_app, uname_arg0)
+  uname_out, uname_err := uname_cmd.Output()
 
-  if err != nil { return string("") }
+  if uname_err != nil { return string("") }
 
-  return factfuncts.Chomp(string(out))
+  return factfuncts.Chomp(string(uname_out))
 }
 
