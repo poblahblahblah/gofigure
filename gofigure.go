@@ -18,6 +18,7 @@ import (
     "github.com/poblahblahblah/gofigure/lib/operatingsystemmajrelease"
     "github.com/poblahblahblah/gofigure/lib/osfamily"
     "github.com/poblahblahblah/gofigure/lib/path"
+    "github.com/poblahblahblah/gofigure/lib/ps"
     "github.com/poblahblahblah/gofigure/lib/timezone"
     "github.com/poblahblahblah/gofigure/lib/unixtime"
     // "github.com/poblahblahblah/gofigure/lib/uptime"
@@ -30,7 +31,7 @@ import (
 func main() {
 
     f := facter.New()
-    f.Add("gofigure_version",          gofigureVersion())
+    f.Add("gofigureversion",          gofigureVersion())
     f.Add("architecture",              architecture.Load())
     f.Add("domain",                    domain.Load())
     f.Add("fqdn",                      fqdn.Load())
@@ -48,6 +49,7 @@ func main() {
     f.Add("operatingsystemmajrelease", operatingsystemmajrelease.Load())
     f.Add("osfamily",                  osfamily.Load())
     f.Add("path",                      path.Load())
+    f.Add("ps",                        ps.Load())
     f.Add("timezone",                  timezone.Load())
     f.Add("current_unix_time",         unixtime.Load())
     // f.Add("uptime",                    uptime.Load())

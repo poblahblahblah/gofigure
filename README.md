@@ -5,7 +5,7 @@ ruby to go translation of facter
 
  - [x] architecture
  - [x] domain
- - [ ] facterversion
+ - [x] facterversion (gofigureversion)
  - [x] fqdn
  - [x] hardwareisa
  - [x] hardwaremodel
@@ -62,7 +62,7 @@ ruby to go translation of facter
  - [x] path
  - [ ] processorcount
  - [ ] productname
- - [ ] ps
+ - [x] ps
  - [ ] rubysitedir (GO_PATH?)
  - [ ] rubyversion (go version?)
  - [ ] sp_boot_mode
