@@ -60,7 +60,7 @@ func Load() string {
   }
 
 
-  case "OS X":
+  case "Darwin":
     return "FIXME"
 
   case "Ubuntu":

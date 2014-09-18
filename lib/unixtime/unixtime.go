@@ -1,6 +1,6 @@
 // purpose: get the current time in unix time
 
-// supports: CentOS, Debian, Fedora, OSX, RedHat, Scientific, Ubuntu
+// supports: CentOS, Darwin, Debian, Fedora, RedHat, Scientific, Ubuntu
 
 // issues: 
 

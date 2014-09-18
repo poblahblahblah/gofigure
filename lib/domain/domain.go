@@ -1,6 +1,6 @@
 // purpose: get a node's domain
 
-// supports: CentOS, Debian, Fedora, OSX, RedHat, Scientific, Ubuntu
+// supports: CentOS, Darwin, Debian, Fedora, RedHat, Scientific, Ubuntu
 
 // issues: returning an empty string is not ideal.
 

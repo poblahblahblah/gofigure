@@ -25,7 +25,7 @@ func Load() string {
   case "OracleLinux":
     return "FIXME"
 
-  case "OS X":
+  case "Darwin":
     return "FIXME"
 
   }

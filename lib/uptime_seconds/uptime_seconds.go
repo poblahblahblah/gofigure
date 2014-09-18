@@ -1,6 +1,6 @@
 // purpose: returns a nodes uptime in seconds
 
-// supports: Fedora, OSX
+// supports: Darwin, Fedora 
 
 // issues:
 //   * add "other" OSes

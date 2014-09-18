@@ -14,7 +14,7 @@ func Load() string {
   kernel := kernel.Load()
 
   if kernel == "Darwin" {
-    return string("OS X")
+    return string("Darwin")
 
   } else if kernel == "Linux" {
     // try to detect which distro we are

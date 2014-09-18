@@ -1,6 +1,6 @@
 // purpose: returns hardware model of the current node
 
-// supports: CentOS, Debian, Fedora, OSX, RedHat, Scientific, Ubuntu
+// supports: CentOS, Darwin, Debian, Fedora, RedHat, Scientific, Ubuntu
 
 package hardwaremodel
 
