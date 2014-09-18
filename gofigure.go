@@ -20,6 +20,11 @@ import (
     "github.com/poblahblahblah/gofigure/lib/path"
     "github.com/poblahblahblah/gofigure/lib/timezone"
     "github.com/poblahblahblah/gofigure/lib/unixtime"
+    // "github.com/poblahblahblah/gofigure/lib/uptime"
+    "github.com/poblahblahblah/gofigure/lib/uptime_days"
+    "github.com/poblahblahblah/gofigure/lib/uptime_hours"
+    "github.com/poblahblahblah/gofigure/lib/uptime_minutes"
+    "github.com/poblahblahblah/gofigure/lib/uptime_seconds"
 )
 
 func main() {
@@ -45,6 +50,11 @@ func main() {
     f.Add("path",                      path.Load())
     f.Add("timezone",                  timezone.Load())
     f.Add("current_unix_time",         unixtime.Load())
+    // f.Add("uptime",                    uptime.Load())
+    f.Add("uptime_days",               uptime_days.Load())
+    f.Add("uptime_hours",              uptime_hours.Load())
+    f.Add("uptime_minutes",            uptime_minutes.Load())
+    f.Add("uptime_seconds",            uptime_seconds.Load())
     
     f.Print()
 }

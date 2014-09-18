@@ -20,7 +20,7 @@ func Load() string {
       if err !=nil { panic(err) }
 
       version_regexp, err := regexp.Compile(`\d+\.\d+`)
-      return (version_regexp.FindString(string(results)))
+      return version_regexp.FindString(string(results))
     }
 
 

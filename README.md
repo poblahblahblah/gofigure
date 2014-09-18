@@ -99,7 +99,7 @@ ruby to go translation of facter
  - [ ] swapsize_mb
  - [x] timezone
  - [ ] uptime
- - [ ] uptime_days
- - [ ] uptime_hours
- - [ ] uptime_seconds
+ - [x] uptime_days
+ - [x] uptime_hours
+ - [x] uptime_seconds
  - [ ] virtual
