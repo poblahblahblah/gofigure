@@ -2,19 +2,18 @@
 
 // supports: CentOS, Darwin, Debian, Fedora, RedHat, Scientific, Ubuntu
 
-// issues: 
+// issues:
 
 package unixtime
 
 import (
-  "time"
-  "strconv"
+	"strconv"
+	"time"
 )
 
 func Load() string {
-  time_int64       := time.Now().Unix()
-  time_string      := strconv.FormatInt(time_int64, 10)
-  //time_string, err := strconv.ParseInt(time_int64, 10, 64)
-  return time_string
+	time_int64 := time.Now().Unix()
+	time_string := strconv.FormatInt(time_int64, 10)
+	//time_string, err := strconv.ParseInt(time_int64, 10, 64)
+	return time_string
 }
-

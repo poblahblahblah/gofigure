@@ -1,25 +1,24 @@
 package osfamily
 
 import (
-  "github.com/poblahblahblah/gofigure/lib/operatingsystem"
+	"github.com/poblahblahblah/gofigure/lib/operatingsystem"
 )
 
 func Load() string {
-  // let's try to work through the operating systems alphabetically.
+	// let's try to work through the operating systems alphabetically.
 
-  switch operatingsystem.Load() {
+	switch operatingsystem.Load() {
 
-  case "CentOS", "Fedora", "OracleLinux", "RedHat", "Scientific":
-    return "RedHat"
+	case "CentOS", "Fedora", "OracleLinux", "RedHat", "Scientific":
+		return "RedHat"
 
-  case "Darwin":
-    return "Darwin"
+	case "Darwin":
+		return "Darwin"
 
-  case "Debian", "Ubuntu":
-    return "Debian"
+	case "Debian", "Ubuntu":
+		return "Debian"
 
-  }
-  return "unknown"
+	}
+	return "unknown"
 
 }
-

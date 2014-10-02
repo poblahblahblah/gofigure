@@ -5,18 +5,19 @@
 package hardwaremodel
 
 import (
-  "github.com/poblahblahblah/gofigure/lib/factfuncts"
-  "os/exec"
+	"github.com/poblahblahblah/gofigure/lib/factfuncts"
+	"os/exec"
 )
 
 func Load() string {
-  app      := "uname"
-  arg0     := "-m"
-  cmd      := exec.Command(app, arg0)
-  out, err := cmd.Output()
+	app := "uname"
+	arg0 := "-m"
+	cmd := exec.Command(app, arg0)
+	out, err := cmd.Output()
 
-  if err != nil { return string("") }
+	if err != nil {
+		return string("")
+	}
 
-  return factfuncts.Chomp(string(out))
+	return factfuncts.Chomp(string(out))
 }
-

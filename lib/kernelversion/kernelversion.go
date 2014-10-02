@@ -1,13 +1,12 @@
 package kernelversion
 
 import (
-  "github.com/poblahblahblah/gofigure/lib/kernelrelease"
-  "strings"
+	"github.com/poblahblahblah/gofigure/lib/kernelrelease"
+	"strings"
 )
 
 func Load() string {
-  kernelrelease := strings.Split(kernelrelease.Load(), "-")
+	kernelrelease := strings.Split(kernelrelease.Load(), "-")
 
-  return kernelrelease[0]
+	return kernelrelease[0]
 }
-

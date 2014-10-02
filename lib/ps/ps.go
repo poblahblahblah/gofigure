@@ -8,21 +8,20 @@
 package ps
 
 import (
-  "github.com/poblahblahblah/gofigure/lib/operatingsystem"
+	"github.com/poblahblahblah/gofigure/lib/operatingsystem"
 )
 
 func Load() string {
 
-  switch operatingsystem.Load() {
+	switch operatingsystem.Load() {
 
-  case "Darwin", "DragonFly", "FreeBSD", "NetBSD", "OpenBSD":
-    return "ps auxwww"
+	case "Darwin", "DragonFly", "FreeBSD", "NetBSD", "OpenBSD":
+		return "ps auxwww"
 
-  default:
-    return "ps -ef"
-  }
+	default:
+		return "ps -ef"
+	}
 
-  return "unknown"
+	return "unknown"
 
 }
-
