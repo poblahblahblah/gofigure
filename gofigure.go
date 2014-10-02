@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"github.com/kelseyhightower/go-facter"
 	"github.com/poblahblahblah/gofigure/lib/architecture"
 	"github.com/poblahblahblah/gofigure/lib/domain"
+	"github.com/poblahblahblah/gofigure/lib/factfuncts"
 	"github.com/poblahblahblah/gofigure/lib/fqdn"
 	"github.com/poblahblahblah/gofigure/lib/hardwareisa"
 	"github.com/poblahblahblah/gofigure/lib/hardwaremodel"
@@ -58,7 +60,7 @@ func main() {
 	f.Add("uptime_minutes", uptime_minutes.Load())
 	f.Add("uptime_seconds", uptime_seconds.Load())
 
-	f.Print()
+	fmt.Printf("%s", factfuncts.FactToJsonString(f))
 }
 
 func gofigureVersion() string {
