@@ -1,6 +1,8 @@
 package factfuncts
 
 import (
+	"encoding/json"
+	"fmt"
 	"strings"
 )
 
@@ -13,4 +15,12 @@ func Chomp(s string) string {
 
 func Strip(s string) string {
 	return strings.Replace(s, `"`, "", -1)
+}
+
+func FactToJsonString(f map[string]interface{}) string {
+	b, err := json.Marshal(f)
+	if err != nil {
+		return fmt.Sprintf("%v", err)
+	}
+	return fmt.Sprintf("%s", b)
 }
